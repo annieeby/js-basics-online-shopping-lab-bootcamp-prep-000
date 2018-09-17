@@ -19,6 +19,10 @@ cart.push(fullItem)
 }
 
 function viewCart() {
+<<<<<<< HEAD
+=======
+  getCart()
+>>>>>>> 8c29dd90d8804bcbfeb3913c55c9b9105284858b
 var cartContents = []
   if (cart.length===0) {
     return "Your shopping cart is empty."
@@ -29,6 +33,7 @@ var cartContents = []
   else {
      for (var i = 0; i < cart.length; i++) { 
        if (i<cart.length-1) {
+<<<<<<< HEAD
         cartContents.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice}`)
        }
         else {
@@ -37,6 +42,16 @@ var cartContents = []
      }
   }
 return `In your cart, you have ${cartContents.join(', ')}`
+=======
+        cartContents.push(`${getCart()[i].itemName} at $${getCart()[i].itemPrice} `)
+       }
+        else {
+          cartContents.push(` and ${getCart()[cart.length-1].itemName} at $${getCart()[cart.length-1].itemPrice}.`)
+        }
+     }
+  }
+return `In your cart, you have ${cartContents}`
+>>>>>>> 8c29dd90d8804bcbfeb3913c55c9b9105284858b
 }
 
 function total() {
